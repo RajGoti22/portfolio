@@ -54,7 +54,7 @@ footer p {
   text-align: right;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   footer {
     display: block;
     padding: 45px 20px 0;  /* bottom pad removed — name bar sits flush */
@@ -67,6 +67,15 @@ footer p {
   /* Name bar must NOT get the margin-bottom from the rule above */
   .footer-name-bar {
     margin-bottom: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .footer-giant-name {
+    font-size: clamp(32px, 14vw, 120px);
+    letter-spacing: -0.06em;
+    max-width: 100%;
+    white-space: nowrap;
   }
 
   .copyright {
@@ -75,8 +84,8 @@ footer p {
 }
 
 @media (max-width: 480px) {
-  /* Tighter letter-spacing so name fits on small phones */
   .footer-giant-name {
-    letter-spacing: -0.08em;
+    font-size: clamp(28px, 13vw, 70px);
+    letter-spacing: -0.06em;
   }
 }

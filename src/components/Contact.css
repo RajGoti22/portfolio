@@ -227,6 +227,11 @@
     display: block;
   }
 
+  .c-line {
+    white-space: normal;
+    font-size: clamp(28px, 6vw, 44px);
+  }
+
   .contact-copy {
     position: relative;
     top: 0;
