@@ -1,0 +1,125 @@
+.experience-layout {
+  display: grid;
+  gap: 8vw;
+  grid-template-columns: 0.72fr 1.28fr;
+  align-items: start;
+}
+
+.experience-copy {
+  position: sticky;
+  top: 140px;
+  align-self: start;
+}
+
+.experience-copy h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(42px, 5.5vw, 82px);
+  letter-spacing: -0.1em;
+  line-height: 0.87;
+  margin: 24px 0;
+}
+
+.experience-copy h2 em {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.experience-copy p {
+  color: #aaa7a2;
+  font-size: 19px;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 330px;
+}
+
+.experience-list {
+  width: 100%;
+}
+
+.job {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 145px 1fr;
+  min-height: 150px;
+  padding: 23px 0;
+}
+
+.job p {
+  color: #87847e;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.job strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.job span {
+  color: #888;
+  display: block;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.education-heading {
+  border-top: 1px solid var(--line);
+  color: #8f8c87;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-top: 38px;
+  padding: 30px 0 0;
+  text-transform: uppercase;
+}
+
+.education-list .job {
+  min-height: 100px;
+}
+
+@media (max-width: 720px) {
+  .experience-layout {
+    display: block;
+  }
+
+  .experience-copy p {
+    font-size: 17px;
+  }
+
+  .experience-list {
+    margin-top: 50px;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .job {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 18px 0;
+  }
+
+  .job strong {
+    font-size: 18px;
+  }
+
+  .education-heading {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .job strong {
+    font-size: 16px;
+  }
+
+  .job p,
+  .job span {
+    font-size: 12px;
+  }
+}

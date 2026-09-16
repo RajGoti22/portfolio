@@ -1,0 +1,80 @@
+.skills {
+  display: grid;
+  gap: 8vw;
+  grid-template-columns: 0.72fr 1.28fr;
+}
+
+.skills h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(44px, 5.5vw, 82px);
+  letter-spacing: -0.1em;
+  line-height: 0.87;
+  margin: 0;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill {
+  border-top: 1px solid var(--line);
+  padding: 21px 0;
+}
+
+.skill:nth-child(odd) {
+  margin-right: 25px;
+}
+
+.skill strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.skill span {
+  color: #85827d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .skills {
+    display: block;
+  }
+
+  .skills h2 {
+    font-size: 60px;
+  }
+
+  .skill-list {
+    margin-top: 44px;
+  }
+
+  .skill:nth-child(odd) {
+    margin-right: 15px;
+  }
+
+  .skill strong {
+    font-size: 16px;
+  }
+
+  .skill span {
+    font-size: 12px;
+  }
+}
+
+/* Single-column on narrow phones */
+@media (max-width: 480px) {
+  .skill-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skill:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .skill strong {
+    font-size: 15px;
+  }
+}

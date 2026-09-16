@@ -1,0 +1,54 @@
+.intro {
+  display: grid;
+  gap: 8vw;
+  grid-template-columns: 0.72fr 1.28fr;
+}
+
+.intro h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(44px, 6vw, 94px);
+  letter-spacing: -0.1em;
+  line-height: 0.87;
+  margin: 0;
+}
+
+.intro h2 em {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.intro-copy {
+  color: #b2b0ad;
+  font-size: 19px;
+  line-height: 1.45;
+  margin-top: 42px;
+  max-width: 520px;
+}
+
+.intro-copy p {
+  margin: 0 0 24px;
+}
+
+.intro-copy strong {
+  color: var(--white);
+  font-weight: 400;
+}
+
+@media (max-width: 720px) {
+  .intro {
+    display: block;
+  }
+
+  .intro .section-label {
+    margin-bottom: 40px;
+  }
+
+  .intro h2 {
+    font-size: 60px;
+  }
+
+  .intro-copy {
+    font-size: 17px;
+    margin-top: 40px;
+  }
+}

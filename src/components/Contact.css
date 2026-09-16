@@ -1,0 +1,282 @@
+/* ====================================================
+   Contact — matches Experience / Intro section style
+   ==================================================== */
+
+.contact-layout {
+  display: grid;
+  gap: 6vw;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: start;
+}
+
+
+/* Left sticky copy column */
+.contact-copy {
+  position: sticky;
+  top: 140px;
+  align-self: start;
+}
+
+.contact-copy h2,
+.contact-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(30px, 4vw, 64px);
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  margin: 24px 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Three-line fading effect — each line must NOT wrap */
+.c-line {
+  display: block;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.c-line-1 { color: rgba(255, 255, 255, 0.22); }
+.c-line-2 { color: rgba(255, 255, 255, 0.55); }
+.c-line-3 { color: #ffffff; }
+
+.contact-subtitle {
+  color: #a0a0a0;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 0 0;
+  max-width: 360px;
+}
+
+.contact-subtitle em {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  color: #ffffff;
+}
+
+
+
+
+
+/* Right content column */
+.contact-content {
+  width: 100%;
+  padding-top: 8px;
+}
+
+/* ── Email CTA block ── */
+.contact-email-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.contact-mono-label {
+  color: #666460;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-email-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-email-link {
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(22px, 2.4vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-email-link:hover {
+  color: var(--lime, #d8ff4f);
+}
+
+.contact-copy-btn {
+  background: transparent;
+  border: none;
+  color: #666460;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.contact-copy-btn:hover {
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+.contact-copied {
+  color: var(--lime, #d8ff4f);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-family: monospace;
+}
+
+/* ── Horizontal rule divider ── */
+.contact-divider {
+  height: 1px;
+  background: var(--line, #292929);
+  margin-bottom: 32px;
+}
+
+/* ── Secondary actions row ── */
+.contact-secondary {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.contact-talk-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: #ffffff;
+  color: #080808;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-talk-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+.contact-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 15px;
+}
+
+.contact-talk-btn:hover .contact-arrow {
+  transform: translateX(4px);
+}
+
+.contact-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #87847e;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.contact-phone-row a {
+  color: #87847e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-phone-row a:hover {
+  color: #ffffff;
+}
+
+/* ── Elsewhere bar ── */
+.contact-elsewhere {
+  border-top: 1px solid var(--line, #292929);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.contact-elsewhere-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.contact-elsewhere-links a {
+  color: #aaa7a2;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.contact-elsewhere-links a:hover {
+  color: #ffffff;
+}
+
+/* ====================================================
+   Responsive
+   ==================================================== */
+@media (max-width: 860px) {
+  .contact-layout {
+    display: block;
+  }
+
+  .contact-copy {
+    position: relative;
+    top: 0;
+    margin-bottom: 40px;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .contact-elsewhere {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Heading lines wrap freely on phone */
+  .c-line {
+    white-space: normal;
+    font-size: clamp(28px, 7.5vw, 42px);
+  }
+
+  /* Email scales down to fit phone width */
+  .contact-email-link {
+    font-size: clamp(18px, 5vw, 26px);
+    letter-spacing: -0.02em;
+  }
+
+  /* Stack Let's Talk + phone vertically */
+  .contact-secondary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .contact-talk-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .c-line {
+    font-size: clamp(24px, 7vw, 36px);
+  }
+
+  .contact-email-link {
+    font-size: 16px;
+  }
+}

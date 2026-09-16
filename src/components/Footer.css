@@ -1,0 +1,82 @@
+footer {
+  display: grid;
+  gap: 35px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 55px 4.8vw 0;
+}
+
+/* Giant name bar */
+.footer-name-bar {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  padding-top: 16px;
+  line-height: 0.82;
+  user-select: none;
+}
+
+.footer-giant-name {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(80px, 16vw, 240px);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  color: rgba(255, 255, 255, 0.045);
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer small {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+footer a,
+footer p {
+  color: #aaa;
+  font-size: 13px;
+  margin: 0;
+}
+
+.copyright {
+  color: #666;
+  font-size: 11px;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  footer {
+    display: block;
+    padding: 45px 20px 0;  /* bottom pad removed — name bar sits flush */
+  }
+
+  footer div {
+    margin-bottom: 35px;
+  }
+
+  /* Name bar must NOT get the margin-bottom from the rule above */
+  .footer-name-bar {
+    margin-bottom: 0;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tighter letter-spacing so name fits on small phones */
+  .footer-giant-name {
+    letter-spacing: -0.08em;
+  }
+}

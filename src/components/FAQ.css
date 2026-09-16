@@ -1,0 +1,156 @@
+.faq {
+  display: grid;
+  gap: 8vw;
+  grid-template-columns: 0.72fr 1.28fr;
+}
+
+.faq h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(44px, 5.5vw, 82px);
+  letter-spacing: -0.1em;
+  line-height: 0.87;
+  margin: 0;
+}
+
+/* ── Each accordion row ── */
+.faq-item {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 20px;
+  transition: padding 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item--open {
+  padding: 28px 0 32px;
+}
+
+/* Header row: number | question | toggle */
+.faq-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-num {
+  color: #555552;
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  width: 36px;
+  padding-top: 4px;
+}
+
+.faq-question {
+  flex: 1;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(17px, 1.5vw, 22px);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+/* Circle +/× button */
+.faq-toggle {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 300;
+  color: #aaa;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+.faq-item--open .faq-toggle {
+  background: #ffffff;
+  color: #080808;
+  border-color: #ffffff;
+}
+
+.faq-row:hover .faq-toggle {
+  border-color: #666;
+  color: #fff;
+}
+
+/* ── Answer — always visible, style changes on open ── */
+.faq-answer {
+  margin: 8px 0 0 56px;   /* always indented under question */
+  font-size: 14px;
+  color: #666460;
+  line-height: 1.55;
+  max-width: 600px;
+  transition: font-size 0.3s ease, color 0.3s ease, margin-top 0.3s ease;
+}
+
+.faq-item--open .faq-answer {
+  font-size: 17px;
+  color: #a0a09a;
+  margin-top: 20px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .faq {
+    display: block;
+  }
+
+  .faq h2 {
+    font-size: 56px;
+  }
+
+  .questions {
+    margin-top: 40px;
+  }
+
+  .faq-num {
+    width: 30px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-toggle {
+    width: 34px;
+    height: 34px;
+    font-size: 19px;
+  }
+
+  .faq-answer {
+    margin-left: 0;   /* remove indent — full width on phone */
+    font-size: 13px;
+  }
+
+  .faq-item--open .faq-answer {
+    font-size: 15px;
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .faq h2 {
+    font-size: 44px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+}
+
