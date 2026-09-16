@@ -8,7 +8,7 @@ export default function Header() {
   // Close mobile nav when resizing to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 860 && open) {
+      if (window.innerWidth > 960 && open) {
         setOpen(false);
       }
     };
