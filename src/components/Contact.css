@@ -271,8 +271,8 @@
   }
 
   .contact-talk-btn {
-    width: 100%;
-    justify-content: center;
+    width: auto;            /* size to content, not full width */
+    align-self: flex-start;
   }
 }
 

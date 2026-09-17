@@ -84,6 +84,13 @@
     display: block;
   }
 
+  /* Unstick the heading on mobile — it was overlapping items while scrolling */
+  .experience-copy {
+    position: relative;
+    top: 0;
+    margin-bottom: 40px;
+  }
+
   .experience-copy p {
     font-size: 17px;
   }
@@ -95,6 +102,7 @@
     overflow: visible;
     padding: 0;
   }
+
 
   .job {
     display: grid;

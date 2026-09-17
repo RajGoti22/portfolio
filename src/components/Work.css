@@ -306,6 +306,8 @@
 }
 
 /* Responsive adjustments */
+
+/* --- Tablet: 601px – 860px --- */
 @media (max-width: 860px) {
   .work-layout {
     display: block;
@@ -315,6 +317,10 @@
     position: relative;
     top: 0;
     margin-bottom: 40px;
+  }
+
+  .work-copy p {
+    max-width: 100%;   /* un-pin the 330px cap on tablet/mobile */
   }
 
   .featured-info {
@@ -328,9 +334,11 @@
     padding-left: 0;
     padding-top: 16px;
     flex-direction: row;
+    flex-wrap: wrap;          /* allow wrapping if space is tight */
     justify-content: space-between;
   }
 
+  /* Remove fixed number column at tablet, keep sector */
   .more-project-item {
     grid-template-columns: 30px 1fr 24px;
   }
@@ -340,13 +348,15 @@
   }
 }
 
+/* --- Mobile: ≤600px --- */
 @media (max-width: 600px) {
   .work-copy h2 {
-    font-size: 52px;
+    font-size: clamp(36px, 12vw, 52px);  /* fluid, won't overflow 320px screens */
   }
 
   .work-copy p {
     font-size: 16px;
+    max-width: 100%;
   }
 
   /* Featured card — tighter padding on phones */
@@ -356,7 +366,7 @@
   }
 
   .featured-banner-title {
-    font-size: 26px;
+    font-size: clamp(22px, 7vw, 26px);
   }
 
   .featured-banner-sub {
@@ -365,7 +375,7 @@
   }
 
   .featured-desc h3 {
-    font-size: 24px;
+    font-size: clamp(20px, 6vw, 24px);
   }
 
   .featured-desc p {
@@ -376,6 +386,7 @@
   .more-project-item {
     grid-template-columns: 1fr 24px;
     gap: 10px;
+    padding: 18px 0;
   }
 
   .more-num {
@@ -386,8 +397,12 @@
     font-size: 17px;
   }
 
+  /* KEY FIX: remove nowrap + fixed max-width — let text wrap naturally */
   .more-details p {
-    max-width: 100%;
+    white-space: normal;      /* was: nowrap — was causing the cut-off overflow */
+    max-width: 100%;          /* fill the available 1fr column */
+    overflow: visible;
+    text-overflow: unset;
   }
 
   /* Meta grid stacks on phones */
@@ -396,3 +411,42 @@
     gap: 10px;
   }
 }
+
+/* --- Extra-small phones: ≤400px --- */
+@media (max-width: 400px) {
+  .work-copy h2 {
+    font-size: clamp(30px, 10vw, 40px);
+  }
+
+  .work-copy p {
+    font-size: 15px;
+  }
+
+  .featured-card {
+    padding: 14px 14px 0;
+    border-radius: 12px;
+  }
+
+  .featured-brand {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .featured-banner-sub {
+    font-size: 13px;
+  }
+
+  .more-project-item {
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .more-details h4 {
+    font-size: 15px;
+  }
+
+  .more-details p {
+    font-size: 12px;
+  }
+}
+
