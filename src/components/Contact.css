@@ -4,8 +4,8 @@
 
 .contact-layout {
   display: grid;
-  gap: 6vw;
-  grid-template-columns: 1.3fr 0.7fr;
+  gap: 5vw;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: start;
 }
 
@@ -20,9 +20,9 @@
 .contact-copy h2,
 .contact-heading {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(30px, 4vw, 64px);
+  font-size: clamp(32px, 4.2vw, 72px);
   letter-spacing: -0.05em;
-  line-height: 1.1;
+  line-height: 1.08;
   margin: 24px 0 20px;
   display: flex;
   flex-direction: column;
@@ -36,9 +36,17 @@
   white-space: nowrap;
 }
 
-.c-line-1 { color: rgba(255, 255, 255, 0.22); }
-.c-line-2 { color: rgba(255, 255, 255, 0.55); }
-.c-line-3 { color: #ffffff; }
+.c-line-1 {
+  color: rgba(255, 255, 255, 0.22);
+}
+
+.c-line-2 {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.c-line-3 {
+  color: #ffffff;
+}
 
 .contact-subtitle {
   color: #a0a0a0;
@@ -89,10 +97,11 @@
 .contact-email-link {
   color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(22px, 2.4vw, 38px);
+  font-size: clamp(16px, 1.8vw, 26px);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   text-decoration: none;
+  word-break: break-all;
   transition: color 0.2s ease;
 }
 
@@ -220,16 +229,26 @@
 }
 
 /* ====================================================
-   Responsive
+   Responsive — Tablet (≤ 960px)
    ==================================================== */
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .contact-layout {
-    display: block;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4vw;
   }
 
-  .c-line {
-    white-space: normal;
-    font-size: clamp(28px, 6vw, 44px);
+  .contact-copy h2,
+  .contact-heading {
+    font-size: clamp(28px, 3.8vw, 58px);
+  }
+}
+
+/* ====================================================
+   Responsive — Stack layout (≤ 780px)
+   ==================================================== */
+@media (max-width: 780px) {
+  .contact-layout {
+    display: block;
   }
 
   .contact-copy {
@@ -238,9 +257,23 @@
     margin-bottom: 40px;
   }
 
+  .contact-copy h2,
+  .contact-heading {
+    font-size: clamp(30px, 7vw, 52px);
+  }
+
+  /* Allow wrapping below desktop */
+  .c-line {
+    white-space: normal;
+  }
+
   .contact-subtitle {
-    font-size: 16px;
+    font-size: 15px;
     max-width: 100%;
+  }
+
+  .contact-email-link {
+    font-size: clamp(18px, 4.5vw, 28px);
   }
 
   .contact-elsewhere {
@@ -250,38 +283,53 @@
   }
 }
 
+/* ====================================================
+   Responsive — Mobile (≤ 600px)
+   ==================================================== */
 @media (max-width: 600px) {
-  /* Heading lines wrap freely on phone */
-  .c-line {
-    white-space: normal;
-    font-size: clamp(28px, 7.5vw, 42px);
+  .contact-copy h2,
+  .contact-heading {
+    font-size: clamp(26px, 7.5vw, 44px);
   }
 
-  /* Email scales down to fit phone width */
   .contact-email-link {
-    font-size: clamp(18px, 5vw, 26px);
+    font-size: clamp(14px, 5vw, 22px);
     letter-spacing: -0.02em;
+    word-break: break-all;
   }
 
-  /* Stack Let's Talk + phone vertically */
   .contact-secondary {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
   }
 
   .contact-talk-btn {
-    width: auto;            /* size to content, not full width */
+    width: auto;
     align-self: flex-start;
+    font-size: 13px;
+    padding: 11px 20px;
+  }
+
+  .contact-phone-row {
+    font-size: 13px;
+  }
+
+  .contact-elsewhere-links a {
+    font-size: 13px;
   }
 }
 
+/* ====================================================
+   Responsive — XSmall (≤ 400px)
+   ==================================================== */
 @media (max-width: 400px) {
-  .c-line {
-    font-size: clamp(24px, 7vw, 36px);
+  .contact-copy h2,
+  .contact-heading {
+    font-size: clamp(22px, 7vw, 34px);
   }
 
   .contact-email-link {
-    font-size: 16px;
+    font-size: clamp(13px, 4.5vw, 18px);
   }
 }

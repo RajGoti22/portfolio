@@ -152,7 +152,7 @@
   .hero-name {
     font-size: 35vw;
     left: -1%;
-    top: 42%;
+    top: calc(42% + 8px);
   }
 
   .hero-image {
@@ -207,7 +207,7 @@
 
   .hero-name {
     font-size: 38vw;
-    top: 38%;
+    top: calc(38% + 30px);
   }
 
   .hero-copy {
