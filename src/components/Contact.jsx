@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <section className="section contact" id="contact">
       <div className="contact-layout">
-        <div className="contact-copy">
+        <div className="contact-copy reveal-left">
           <div className="section-label">Contact / 06</div>
           <h2 className="contact-heading">
             <span className="c-line c-line-1">Have an opportunity?</span>
@@ -29,7 +29,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="contact-content">
+        <div className="contact-content reveal" style={{ '--delay': '120ms' }}>
           <div className="contact-email-cta">
             <span className="contact-mono-label">EMAIL</span>
             <div className="contact-email-row">

@@ -23,7 +23,7 @@ export default function About() {
       <div className="about-layout">
 
         {/* Left sidebar */}
-        <div className="about-sidebar">
+        <div className="about-sidebar reveal-left">
           <div className="section-label">About / 02</div>
           <h2 className="about-heading">
             Who I<br />
@@ -78,20 +78,20 @@ export default function About() {
 
         {/* Right bio */}
         <div className="about-body">
-          <p className="about-para about-para--lead">
+          <p className="about-para about-para--lead reveal" style={{ '--delay': '80ms' }}>
             I started in design, then learned to ship. That sequence matters
             — it means I think about the user before writing code, knowing when{" "}
             <em>a better interaction solves more than a better algorithm.</em>
           </p>
 
-          <p className="about-para">
+          <p className="about-para reveal" style={{ '--delay': '160ms' }}>
             Four years of B.Tech in IT gave me the core fundamentals, while internships
             at Pixer Digital and Webito Infotech provided real production experience.
             I've shipped AI travel planners, e-commerce platforms, and desktop SaaS
             modules using React, TypeScript, MobX, and SQL.
           </p>
 
-          <p className="about-para about-para--muted">
+          <p className="about-para about-para--muted reveal" style={{ '--delay': '240ms' }}>
             I am looking for a full-time role where the codebase is treated like a product,
             feedback loops are short, and teams focus on building great user experiences.
           </p>

@@ -10,8 +10,8 @@ export default function Skills() {
           <h2>A practical stack for building products end to end.</h2>
         </div>
         <div className="skill-list">
-          {skills.map((skill) => (
-            <div className="skill" key={skill.category}>
+          {skills.map((skill, i) => (
+            <div className="skill reveal-scale" key={skill.category} style={{ '--delay': `${i * 80}ms` }}>
               <strong>{skill.category}</strong>
               <span>{skill.items}</span>
             </div>

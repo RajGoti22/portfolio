@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <section className="section experience" id="about">
       <div className="experience-layout">
-        <div className="experience-copy">
+        <div className="experience-copy reveal-left">
           <div className="section-label">Experience / 05</div>
           <h2>
             The arc of how I <em>got here.</em>
@@ -16,8 +16,8 @@ export default function Experience() {
           </p>
         </div>
         <div className="experience-list">
-          {experience.map((row) => (
-            <div className="job" key={row.period}>
+          {experience.map((row, i) => (
+            <div className="job reveal" key={row.period} style={{ '--delay': `${i * 100}ms` }}>
               <p>{row.period}</p>
               <div>
                 <strong>{row.role}</strong>
@@ -28,8 +28,8 @@ export default function Experience() {
           ))}
           <div className="education-heading">Education</div>
           <div className="education-list">
-            {education.map((row) => (
-              <div className="job" key={row.period}>
+            {education.map((row, i) => (
+              <div className="job reveal" key={row.period} style={{ '--delay': `${i * 100}ms` }}>
                 <p>{row.period}</p>
                 <div>
                   <strong>{row.degree}</strong>

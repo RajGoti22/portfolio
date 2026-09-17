@@ -1,0 +1,27 @@
+﻿/* ====================================================
+   Scroll Reveal -- Base States
+   IntersectionObserver adds is-visible class
+   ==================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal,
+  .reveal-left,
+  .reveal-scale {
+    opacity: 0;
+    transition:
+      opacity   0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--delay, 0ms);
+  }
+
+  .reveal       { transform: translateY(36px); }
+  .reveal-left  { transform: translateX(-36px); }
+  .reveal-scale { transform: scale(0.92); }
+
+  .reveal.is-visible,
+  .reveal-left.is-visible,
+  .reveal-scale.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}

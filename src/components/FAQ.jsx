@@ -20,7 +20,8 @@ export default function FAQ() {
             return (
               <div
                 key={item.question}
-                className={`faq-item${isOpen ? ' faq-item--open' : ''}`}
+                className={`faq-item reveal${isOpen ? ' faq-item--open' : ''}`}
+                style={{ '--delay': `${i * 80}ms` }}
               >
                 <button
                   className="faq-row"
