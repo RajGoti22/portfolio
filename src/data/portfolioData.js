@@ -32,11 +32,11 @@ export const projects = [
   },
   {
     num: '03',
-    type: '03 / Frontend',
-    sector: 'FRONTEND',
-    title: 'Reusable UI systems',
-    text: 'Documented React and TypeScript components built for reuse across SaaS product modules.',
-    href: '#contact',
+    type: '03 / Restaurant',
+    sector: 'RESTAURANT',
+    title: 'Goldleaf Dining',
+    text: 'An authentic Indian fine dining restaurant website featuring menu options, online table reservations, and responsive UI design.',
+    href: 'https://goldleaf-dining-restaurant.rajgoti.in/',
   },
   {
     num: '04',
