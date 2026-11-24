@@ -1,4 +1,4 @@
-﻿/* ====================================================
+/* ====================================================
    Scroll Reveal -- Base States
    IntersectionObserver adds is-visible class
    ==================================================== */
@@ -19,8 +19,11 @@
   .reveal-scale { transform: scale(0.92); }
 
   .reveal.is-visible,
+  .reveal[data-revealed="true"],
   .reveal-left.is-visible,
-  .reveal-scale.is-visible {
+  .reveal-left[data-revealed="true"],
+  .reveal-scale.is-visible,
+  .reveal-scale[data-revealed="true"] {
     opacity: 1;
     transform: none;
   }

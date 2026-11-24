@@ -25,6 +25,8 @@
 
 .faq-item--open {
   padding: 28px 0 32px;
+  opacity: 1;
+  transform: none;
 }
 
 /* Header row: number | question | toggle */
@@ -78,15 +80,17 @@
   margin-top: -2px;
 }
 
-.faq-item--open .faq-toggle {
-  background: #ffffff;
-  color: #080808;
-  border-color: #ffffff;
-}
-
+/* Hover & open states: ensure minus/plus is always clearly visible */
 .faq-row:hover .faq-toggle {
   border-color: #666;
   color: #fff;
+}
+
+.faq-item--open .faq-toggle,
+.faq-item--open .faq-row:hover .faq-toggle {
+  background: #ffffff;
+  color: #080808;
+  border-color: #ffffff;
 }
 
 /* ── Answer — always visible, style changes on open ── */

@@ -10,7 +10,7 @@ export default function FAQ() {
   return (
     <section className="section">
       <div className="faq">
-        <div>
+        <div className="reveal-left">
           <div className="section-label">FAQ / 04</div>
           <h2>The questions people ask most often.</h2>
         </div>
@@ -24,14 +24,16 @@ export default function FAQ() {
                 style={{ '--delay': `${i * 80}ms` }}
               >
                 <button
+                  type="button"
                   className="faq-row"
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
+                  aria-label={`${isOpen ? 'Collapse' : 'Expand'} ${item.question}`}
                 >
                   <span className="faq-num">Q.{String(i + 1).padStart(2, '0')}</span>
                   <span className="faq-question">{item.question}</span>
-                  <span className="faq-toggle">
-                    {isOpen ? '×' : '+'}
+                  <span className="faq-toggle" aria-hidden="true">
+                    {isOpen ? '\u2212' : '+'}
                   </span>
                 </button>
                 <p className="faq-answer">{item.answer}</p>
@@ -43,3 +45,4 @@ export default function FAQ() {
     </section>
   );
 }
+
